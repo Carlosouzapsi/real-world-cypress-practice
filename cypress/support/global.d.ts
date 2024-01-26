@@ -1,9 +1,13 @@
 /// <reference types="cypress"/>
 declare namespace Cypress {
   interface Chainable {
-    typeRandomWords(
-      count?: number,
-      options?: Partial<TypeOptions>
+    getBySel(
+      dataTestAttribute: string,
+      args?: any
+    ): Chainable<JQuery<HTMLElement>>;
+    getBySelLike(
+      dataTestAttribute: string,
+      args?: any
     ): Chainable<JQuery<HTMLElement>>;
   }
 }

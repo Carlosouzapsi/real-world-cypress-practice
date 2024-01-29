@@ -6,13 +6,13 @@ https://github.com/Carlosouzapsi/cypress-realworld-app
 
 #### e2e test section
 
-## Login tests
+## Login and logout tests
 
 1. Should do login with valid credentials
 2. Should not do login with a non existent username
-3. Should not do login with a invalid password
-4. Should display an input error when using a blank username
-5. Should display an input error when using a blank password
+3. Should not do login with a non existent password
+4. Should not do login when using a blank username
+5. Should not do login when using a blank password
 6. Should display an input error when password doesn't has at least 4 characters
 7. Should do login remembering a valid user
 8. Should do logout with a valid logged user

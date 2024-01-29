@@ -4,11 +4,9 @@ Software Under Test (SUT) - Real World App - Banking Accounts:
 
 https://github.com/Carlosouzapsi/cypress-realworld-app
 
-## e2e test section
+#### e2e test section
 
-### Login Page
-
-## Login Tests
+## Login tests
 
 1. Should do login with valid credentials
 2. Should not do login with a non existent username

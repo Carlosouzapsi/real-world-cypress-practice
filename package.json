@@ -2,7 +2,7 @@
   "name": "banking-account-free",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open"
   },
@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.3",
-    "typescript": "^5.3.3"
+    "cypress": "^13.6.3"
   }
 }

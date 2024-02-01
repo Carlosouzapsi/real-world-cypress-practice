@@ -7,12 +7,7 @@ describe("login and logout tests", function () {
     cy.visit("/");
   });
 
-  interface User {
-    userName: string;
-    password: string;
-  }
-
-  const user: User = {
+  const user = {
     userName: "Katharina_Bernier",
     password: "s3cret",
   };

@@ -2,7 +2,7 @@ import loginPageLocators from "../support/locators/loginPageLocators";
 import homePageLocators from "../support/locators/homePageLocators";
 import toastErrors from "../support/locators/components/toastComponents";
 
-describe("login and logout tests", function () {
+describe("login tests", function () {
   beforeEach(function () {
     cy.visit("/");
   });
@@ -68,5 +68,17 @@ describe("login and logout tests", function () {
       .contains("Password must contain at least 4 characters");
 
     cy.get(loginPageLocators.btnSignIn).should("have.attr", "disabled");
+  });
+  it("Should do logout with a valid logged user", function () {
+    cy.get(loginPageLocators.inputUsername).type(user.userName);
+    cy.get(loginPageLocators.inputPassword).type(user.password);
+
+    cy.get(loginPageLocators.btnSignIn).click();
+
+    cy.get(homePageLocators.homeAppTitle).should("exist");
+
+    cy.get(homePageLocators.homeLogOutBtn).click();
+
+    cy.location("pathname").should("equal", "/signin");
   });
 });

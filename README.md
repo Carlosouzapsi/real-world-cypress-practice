@@ -32,3 +32,11 @@ https://github.com/Carlosouzapsi/cypress-realworld-app
 ## edit bank account tests
 
 ## delete bank account tests
+
+## create payment requests tests
+
+## create payment pay tests
+
+## notification tests
+
+## transaction details list tests

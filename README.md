@@ -19,7 +19,7 @@ https://github.com/Carlosouzapsi/cypress-realworld-app
 
 ## New user account tests
 
-1. Should create a new account using valid information / validate signbackpage
+1. Should create a new account using valid credentials
 2. Should not create a new account using blank values on first name input
 3. Should not create a new account using blank values on last name input
 4. Should not create a new account using blank values on username input

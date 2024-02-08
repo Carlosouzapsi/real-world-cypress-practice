@@ -1,7 +1,3 @@
-/*
-Try to use the chatGPT function to do login via API
-and use the header to nav on the system
-*/
 Cypress.Commands.add("apiLogin", (username, password) => {
   cy.request({
     method: "POST",
@@ -11,6 +7,13 @@ Cypress.Commands.add("apiLogin", (username, password) => {
       password,
     },
   }).then((response) => {
+    // cy.window()
+    //   .its("localStorage")
+    //   .invoke("getItem", "authState")
+    //   .should("exist");
+    // const token = localStorage.getItem("authState");
+    // cy.log(token);
+
     expect(response.status).to.eq(200);
   });
 });

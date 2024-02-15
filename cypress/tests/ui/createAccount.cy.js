@@ -23,10 +23,10 @@ describe("create account tests", () => {
 
     cy.get('[data-test="signup-submit"]').click();
 
-    // TODO - validate new user
     cy.findUserOnDB("filter", "users").then((users) => {
-      // to do
-      cy.log(users);
+      const comparedUser = user.userName;
+      const userFound = users.find((user) => user.username === comparedUser);
+      expect(userFound.username).to.eq("doeJohn");
     });
   });
 });

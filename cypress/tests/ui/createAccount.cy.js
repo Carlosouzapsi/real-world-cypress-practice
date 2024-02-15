@@ -1,5 +1,6 @@
 describe("create account tests", () => {
   beforeEach(() => {
+    cy.task("db:seed");
     cy.visit("/");
   });
   const user = {
@@ -23,5 +24,9 @@ describe("create account tests", () => {
     cy.get('[data-test="signup-submit"]').click();
 
     // TODO - validate new user
+    cy.findUserOnDB("filter", "users").then((users) => {
+      // to do
+      cy.log(users);
+    });
   });
 });

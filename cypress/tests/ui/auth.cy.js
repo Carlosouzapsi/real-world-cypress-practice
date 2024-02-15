@@ -1,6 +1,6 @@
-import loginPageLocators from "../support/locators/loginPageLocators";
-import homePageLocators from "../support/locators/homePageLocators";
-import toastErrors from "../support/locators/components/toastComponents";
+import loginPageLocators from "../../support/locators/loginPageLocators";
+import homePageLocators from "../../support/locators/homePageLocators";
+import toastErrors from "../../support/locators/components/toastComponents";
 
 describe("login tests", function () {
   beforeEach(function () {

@@ -19,17 +19,31 @@ https://github.com/Carlosouzapsi/cypress-realworld-app
 
 ## New user account tests
 
-1. Should create a new account using valid credentials
-2. Should not create a new account using blank values on first name input
-3. Should not create a new account using blank values on last name input
-4. Should not create a new account using blank values on username input
-5. Should not create a new account using blank values on password input
-6. Should not create a new account using blank values on confirm password input
-7. Should not create a new account using less than 4 characters on password field
+1. Should create a new user account using valid credentials
+2. Should not create a new user account using blank values on firstname input
+3. Should not create a new user account using blank values on lastname input
+4. Should not create a new user account using blank values on username input
+5. Should not create a new user account using blank values on password input
+6. Should not create a new user account using blank values on confirm password input
+7. Should not create a new user account using less than 4 characters on password field
+8. Should not create a new user account using confirm password different than password
+
+## Edit user account tests
+
+1. Should edit the user account first name using a valid value
+2. Should not edit user account first name using blank values
+3. Should edit the user first name using a valid value
+4. TODO
 
 ## new bank account tests
 
-## edit bank account tests
+1. Should create a new bank account with valid values
+2. Should not create a new bank account using blank values on Bank name input
+3. Should not create a new bank account using blank values on Routing number input
+4. Should not create a new bank account using blank values on Account number input
+5. Should display an error message when Bank name has less than 5 characters
+6. Should display an error message when routing number with an invalid value
+7. Should display an error message when account number has less than 9 digits
 
 ## delete bank account tests
 

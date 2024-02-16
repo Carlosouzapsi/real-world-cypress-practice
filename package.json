@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:ui": "cypress run --spec 'cypress/tests/ui/*'"
   },
   "keywords": [],
   "author": "",

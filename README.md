@@ -19,7 +19,7 @@ https://github.com/Carlosouzapsi/cypress-realworld-app
 
 ## New user account tests
 
-1. Should create a new user account using valid credentials
+1. Should create a new user account using valid values
 2. Should not create a new user account using blank values on firstname input
 3. Should not create a new user account using blank values on lastname input
 4. Should not create a new user account using blank values on username input
@@ -30,10 +30,16 @@ https://github.com/Carlosouzapsi/cypress-realworld-app
 
 ## Edit user account tests
 
-1. Should edit the user account first name using a valid value
+1. Should edit user account first name using a valid value
 2. Should not edit user account first name using blank values
-3. Should edit the user first name using a valid value
-4. TODO
+3. Should edit user account last name using a valid value
+4. Should not edit user account last name using blank values
+5. Should edit user account email using a valid email value
+6. Should not edit user account email using a blank value
+7. Should not edit user account email using an invalid email format
+8. Should edit user account phone number using a valid value
+9. Should not edit user account phone using a blank value
+10. Should not edit user phone number using a invalid phone number value
 
 ## new bank account tests
 

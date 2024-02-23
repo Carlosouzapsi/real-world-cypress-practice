@@ -1,5 +1,6 @@
 import signupPageLocators from "../../support/locators/signupPageLocators";
 import loginPageLocators from "../../support/locators/loginPageLocators";
+import helpersComponents from "../../support/locators/components/helpersComponents";
 
 describe("create new user account tests", () => {
   beforeEach(() => {
@@ -42,7 +43,7 @@ describe("create new user account tests", () => {
     cy.get(signupPageLocators.inputPassword).type(user.password);
     cy.get(signupPageLocators.inputConfirmPass).type(user.passConfirm);
 
-    cy.get("#firstName-helper-text")
+    cy.get(helpersComponents.firstNameHelper)
       .should("exist")
       .contains("First Name is required");
     cy.get(signupPageLocators.btnSignup).should("have.attr", "disabled");
@@ -58,7 +59,7 @@ describe("create new user account tests", () => {
     cy.get(signupPageLocators.inputPassword).type(user.password);
     cy.get(signupPageLocators.inputConfirmPass).type(user.passConfirm);
 
-    cy.get("#lastName-helper-text")
+    cy.get(helpersComponents.lastNameHelper)
       .should("exist")
       .contains("Last Name is required");
     cy.get(signupPageLocators.btnSignup).should("have.attr", "disabled");
@@ -74,7 +75,7 @@ describe("create new user account tests", () => {
     cy.get(signupPageLocators.inputPassword).type(user.password);
     cy.get(signupPageLocators.inputConfirmPass).type(user.passConfirm);
 
-    cy.get("#username-helper-text")
+    cy.get(helpersComponents.userNameHelper)
       .should("exist")
       .contains("Username is required");
     cy.get(signupPageLocators.btnSignup).should("have.attr", "disabled");
@@ -90,7 +91,7 @@ describe("create new user account tests", () => {
     cy.get(signupPageLocators.inputPassword).type(user.password).clear();
     cy.get(signupPageLocators.inputConfirmPass).type(user.passConfirm);
 
-    cy.get("#password-helper-text")
+    cy.get(helpersComponents.passwordHelper)
       .should("exist")
       .contains("Enter your password");
     cy.get(signupPageLocators.btnSignup).should("have.attr", "disabled");
@@ -105,10 +106,10 @@ describe("create new user account tests", () => {
     cy.get(signupPageLocators.inputPassword).type(user.password);
     cy.get(signupPageLocators.inputConfirmPass).type(user.passConfirm).clear();
 
-    // Helper
+    // Workaround to trigger helper
     cy.get(signupPageLocators.inputPassword).click();
 
-    cy.get("#confirmPassword-helper-text")
+    cy.get(helpersComponents.confirmPassHelper)
       .should("exist")
       .contains("Confirm your password");
     cy.get(signupPageLocators.btnSignup).should("have.attr", "disabled");
@@ -124,7 +125,7 @@ describe("create new user account tests", () => {
     cy.get(signupPageLocators.inputPassword).type(user.password);
     cy.get(signupPageLocators.inputConfirmPass).type("pwd1235");
 
-    cy.get("#confirmPassword-helper-text")
+    cy.get(helpersComponents.confirmPassHelper)
       .should("exist")
       .contains("Password does not match");
     cy.get(signupPageLocators.btnSignup).should("have.attr", "disabled");
@@ -139,7 +140,7 @@ describe("create new user account tests", () => {
     cy.get(signupPageLocators.inputPassword).type("pwd");
     cy.get(signupPageLocators.inputConfirmPass).type("pwd");
 
-    cy.get("#password-helper-text")
+    cy.get(helpersComponents.passwordHelper)
       .should("exist")
       .contains("Password must contain at least 4 characters");
     cy.get(signupPageLocators.btnSignup).should("have.attr", "disabled");
